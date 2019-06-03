@@ -35,6 +35,12 @@ Resources:
 
 -   [https://django-mptt.readthedocs.io/en/latest/overview.html](https://django-mptt.readthedocs.io/en/latest/overview.html)
 
+---
+
+## To Run This App
+
+---
+
 ### Rubric
 
 1. DB is committed with repo.
