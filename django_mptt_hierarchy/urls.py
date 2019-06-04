@@ -20,5 +20,6 @@ from django_mptt_hierarchy import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", views.homepage, name="index"),
+    path("", views.homepage_view, name="homepage"),
+    path("addfile/", views.file_add_view, name="makindemfiles"),
 ]

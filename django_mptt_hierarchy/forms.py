@@ -5,4 +5,4 @@ from mptt.forms import TreeNodeChoiceField
 
 class FileAddForm(forms.Form):
     name = forms.CharField(max_length=75)
-    parent = TreeNodeChoiceField(query=File.objects.all())
+    parent = TreeNodeChoiceField(queryset=File.objects.all())

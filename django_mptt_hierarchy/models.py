@@ -11,4 +11,6 @@ class File(MPTTModel):
         order_insertion_by = ["name"]
 
     def __str__(self):
-        return self.name
+        if self.parent is None:
+            return f"{self.name} (big parent)"
+        return f"{self.name} is part of {self.parent}"

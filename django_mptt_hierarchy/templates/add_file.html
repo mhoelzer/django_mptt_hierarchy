@@ -1,0 +1,7 @@
+<form action="/addfile/" method="post">
+    {% csrf_token%}
+    {{ form.as_p }}
+    <div class="row justify-content-center">
+    <input type="submit" value="Add File" id="button"/>
+    </div>
+</form>
