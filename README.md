@@ -39,6 +39,20 @@ Resources:
 
 ## To Run This App
 
+1. Clone/download code.
+2. Install pipenv and any packages inside the `Pipfile`.
+3. While inside the `pipenv shell`, run program with `python manage.py runserver`.
+4. To add stuff through the command line:
+    1. Run `python manage.py shell` while in `pipenv shell`.
+    2. Add code similar to below:
+    ```
+    from myapp.models import Genre
+    rock = Genre.objects.create(name="Rock")
+    blues = Genre.objects.create(name="Blues")
+    Genre.objects.create(name="Hard Rock", parent=rock)
+    Genre.objects.create(name="Pop Rock", parent=rock)
+    ```
+
 ---
 
 ### Rubric
