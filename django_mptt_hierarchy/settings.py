@@ -25,8 +25,9 @@ SECRET_KEY = ')7mxm&1!0#@r^e=ald(6m=(utna75a)pujl(ilgsjz)c$9n%es'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
+MPTT_ADMIN_LEVEL_INDENT = 20
 
 # Application definition
 
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "django_mptt_hierarchy",
+    "mptt"
 ]
 
 MIDDLEWARE = [
@@ -54,7 +57,7 @@ ROOT_URLCONF = 'django_mptt_hierarchy.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, "django_mptt_hierarchy", "templates")],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
